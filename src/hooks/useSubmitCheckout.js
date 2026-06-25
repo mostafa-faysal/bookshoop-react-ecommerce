@@ -12,6 +12,7 @@ export const useSubmitCheckout = () => {
       return res.data;
     },
     onSuccess: () => {
+      queryClient.setQueryData(["cart"], []);
       queryClient.invalidateQueries({ queryKey: ["cart"] });
       toast.success("Checkout successful! Your order has been placed.");
     },

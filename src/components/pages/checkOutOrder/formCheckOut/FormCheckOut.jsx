@@ -1,8 +1,10 @@
 import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { useSubmitCheckout } from "../../../../hooks/useSubmitCheckout";
 import Payment from "../payment/Payment";
 
 export default function FormCheckOut() {
+  const navigate = useNavigate();
   const refName = useRef();
   const refPhone = useRef();
   const refEmail = useRef();
@@ -24,7 +26,7 @@ export default function FormCheckOut() {
             notes: refNote.current?.value,
           };
           mutateAsync(userData).then(() => {
-            window.location.href = "/books";
+            navigate("/books");
           });
         }}
       >
