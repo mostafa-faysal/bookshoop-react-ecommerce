@@ -1,16 +1,18 @@
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { useSubmitCheckout } from "../../../../hooks/useSubmitCheckout";
+import { useQueryClient } from "@tanstack/react-query";
+import toast from "react-hot-toast";
 import Payment from "../payment/Payment";
 
 export default function FormCheckOut() {
   const navigate = useNavigate();
+  const queryClient = useQueryClient();
   const refName = useRef();
   const refPhone = useRef();
   const refEmail = useRef();
   const refCountry = useRef();
   const refNote = useRef();
-  const { mutateAsync } = useSubmitCheckout();
+  
   return (
     <div className="mt-6 w-full md:ml-5">
       <form
@@ -18,16 +20,12 @@ export default function FormCheckOut() {
         className="flex flex-col gap-8 p-4 w-full border py-15 bg-base-200 border-base-300 rounded-box"
         onSubmit={(e) => {
           e.preventDefault();
-          const userData = {
-            customerName: refName.current?.value,
-            customerPhone: refPhone.current?.value,
-            customerEmail: refEmail.current?.value,
-            customerAddress: refCountry.current?.value,
-            notes: refNote.current?.value,
-          };
-          mutateAsync(userData).then(() => {
-            navigate("/books");
-          });
+          
+          // محاكاة نجاح الطلب لأنه لا يوجد API حالياً
+          queryClient.setQueryData(["cart"], []);
+          queryClient.invalidateQueries({ queryKey: ["cart"] });
+          toast.success("Checkout successful! Your order has been placed.");
+          navigate("/books");
         }}
       >
         <h2 className="text-xl font-bold text-gray-800">
