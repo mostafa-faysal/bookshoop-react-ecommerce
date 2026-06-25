@@ -1,6 +1,6 @@
 export const useHandleProductClick = () => {
 
-  const handleProductClick = (book) => {
+  const HandleProductClick = (book) => {
     if (!book) return;
 
     const bookData = {
@@ -15,5 +15,5 @@ export const useHandleProductClick = () => {
    
   };
 
-  return handleProductClick;
+  return HandleProductClick;
 };

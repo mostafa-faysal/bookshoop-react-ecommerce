@@ -1,15 +1,15 @@
 import GroubsBtn from "../../../groupsBtn/GroubsBtn";
-import { useHandleProductClick } from "../../../../hooks/usehandleProductClick";
+import { useHandleProductClick } from "../../../../hooks/useHandleProductClick";
 
 export default function BookListItem({ book }) {
-  const handleProductClick = useHandleProductClick();
+  const HandleProductClick = useHandleProductClick();
 
   return (
     <div className="flex flex-col md:flex-row overflow-hidden border shadow-sm rounded-2xl bg-base-100 border-base-200 w-full md:h-[220px]">
       {/* Image Container */}
       <div 
         className="w-full md:w-[220px] h-[250px] md:h-full shrink-0 p-4 bg-white flex items-center justify-center cursor-pointer hover:opacity-90 transition-opacity"
-        onClick={() => handleProductClick(book)}
+        onClick={() => HandleProductClick(book)}
       >
         <img
           src={book.image}
