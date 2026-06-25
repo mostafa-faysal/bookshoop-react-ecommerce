@@ -12,7 +12,7 @@ export default function FormCheckOut() {
   const refEmail = useRef();
   const refCountry = useRef();
   const refNote = useRef();
-  
+
   return (
     <div className="mt-6 w-full md:ml-5">
       <form
@@ -20,8 +20,7 @@ export default function FormCheckOut() {
         className="flex flex-col gap-8 p-4 w-full border py-15 bg-base-200 border-base-300 rounded-box"
         onSubmit={(e) => {
           e.preventDefault();
-          
-          // محاكاة نجاح الطلب لأنه لا يوجد API حالياً
+
           localStorage.setItem("forceEmptyCart", "true");
           queryClient.setQueryData(["cart"], []);
           toast.success("Checkout successful! Your order has been placed.");

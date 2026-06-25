@@ -11,10 +11,10 @@ export function uselogin() {
       return response.data
     },
     onSuccess: (data) => {
-      // Assuming data.token exists
+      
       if (data?.token) {
           useAuthStore.getState().setToken(data.token)
-      } else if (data?.data?.token) { // handle nested data object if present
+      } else if (data?.data?.token) { 
           useAuthStore.getState().setToken(data.data.token)
       }
       queryClient.invalidateQueries(["user"])

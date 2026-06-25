@@ -11,7 +11,7 @@ export default function CartItem({ item }) {
 
   return (
     <div className="flex flex-col md:flex-row overflow-hidden border shadow-sm rounded-2xl bg-base-100 border-base-200 w-full md:h-[220px]">
-      {/* Image Container */}
+      
       <div className="w-full md:w-[220px] h-[250px] md:h-full shrink-0 p-4 bg-white flex items-center justify-center">
         <img
           src={item.image}
@@ -20,9 +20,9 @@ export default function CartItem({ item }) {
         />
       </div>
 
-      {/* Content Container */}
+      
       <div className="flex flex-col flex-1 justify-between p-5 md:p-6">
-        {/* Title & Description */}
+        
         <div className="flex flex-col gap-2 mb-4 md:mb-0">
           <h2 className="text-xl font-bold text-gray-800 line-clamp-1">
             {item.title}
@@ -35,9 +35,9 @@ export default function CartItem({ item }) {
           </p>
         </div>
 
-        {/* Controls & Pricing */}
+        
         <div className="flex flex-col gap-6 justify-between items-start mt-auto sm:flex-row sm:items-end">
-          {/* Quantity Control */}
+          
           <div className="flex flex-row gap-4 justify-between items-center w-full sm:w-auto">
             <span className="text-sm font-semibold text-[#D9176C] uppercase tracking-wide">
               Quantity:
@@ -51,7 +51,7 @@ export default function CartItem({ item }) {
             />
           </div>
 
-          {/* Prices & Delete Action */}
+          
           <div className="flex flex-row gap-6 justify-between items-center w-full sm:w-auto md:gap-10">
             <div className="flex flex-col gap-1 items-center sm:items-start">
               <span className="text-xs font-semibold tracking-wider text-gray-400 uppercase">
@@ -71,7 +71,7 @@ export default function CartItem({ item }) {
               </span>
             </div>
 
-            {/* Delete Button */}
+            
             <button
               onClick={() => deleteCartItem(item.cartId)}
               className="text-red-500 bg-red-50 border-none transition-colors btn btn-circle hover:bg-red-500 hover:text-white"

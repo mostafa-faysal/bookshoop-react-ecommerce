@@ -4,7 +4,7 @@ import { useGetAllItem } from "../../../../hooks/useGetAllItem";
 export default function OrderSummary() {
   const { data: cartData, isLoading, error } = useGetAllItem();
 
-  // Calculate the total price from the cart items
+  
   const subtotal =
     cartData?.reduce((sum, item) => sum + Number(item.totalPrice || 0), 0) || 0;
 
