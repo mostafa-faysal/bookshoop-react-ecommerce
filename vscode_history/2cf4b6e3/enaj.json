@@ -1,0 +1,37 @@
+{
+    "posts":[
+        {
+            "id":1,
+            "title":"title one",
+            "decription" : "post one"
+        },
+        {
+            "id":2,
+            "title":"title two",
+            "decription" : "post two"
+        },
+        {
+            "id":3,
+            "title":"title three",
+            "decription" : "post three"
+        },
+        {
+            "id":4,
+            "title":"title four",
+            "decription" : "post four"
+        },
+        {
+            "id":5,
+            "title":"title five",
+            "decription" : "post five"
+        }
+    ] ,
+    "users": [
+        {
+            "name": "ahmed",
+            "jopTitle" : "front-end",
+            "phone" : "01098774752",
+            "active" : true
+        }
+    ]
+}

@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sign up</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Chau+Philomene+One:ital@0;1&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/sign-up.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul class="nav ul-nav">
+        <li class="nav-item logo"><img src="./images/Frame 11.png" /></li>
+        <li class="nav-item">
+          <a href="./index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="./login.html" class="nav-link">Books</a>
+        </li>
+        <li class="nav-item">
+          <a href="./register.html" class="nav-link">About us</a>
+        </li>
+      </ul>
+      <div>
+        <button class="btn btn-primary login-btn"><a href="./login.html">Login</a></button>
+        <button class="btn btn-primary register-btn">Sign Up</button>
+      </div>
+    </nav>
+    <section>
+      <img src="./images/5176119115_f157862569_o 1@2x.png" class="img1" />
+    </section>
+    <section class="form-section">
+      <form class="login-form w-100">
+          <div class="mb-3 w-50">
+            <label for="first-name" class="form-label">First Name</label>
+            <input
+              type="text"
+              class="form-control email-input name-input"
+              id="first-name"
+              placeholder="John"
+            />
+          </div>
+
+        <div class="mb-3 w-50 posation-img">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control email-input email"
+            id="email"
+            placeholder="example@gmail.com"
+          />
+        </div>
+        <div class="mb-3 w-50 posation-img">
+          <label for="password" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control password-input password"
+            id="password"
+            placeholder="Enter your password"
+          />
+          <div class="see-pass pass">
+            <img src="./images/Vector.png " />
+          </div>
+        </div>
+        <div class="mb-3 w-50 posation-img">
+          <label for="password" class="form-label">Confirm password</label>
+          <input
+            type="password"
+            class="form-control password-input confirm-password"
+            id="password"
+            placeholder="Enter your password"
+          />
+          <div class="see-confirm-pass">
+            <img src="./images/Vector.png " />
+          </div>
+        </div>
+        <div
+          class="mb-3 w-50 d-flex justify-content-between align-items-center"
+        >
+          <div class="mb-3 form-check w-50 remember-me-container">
+            <input
+              type="checkbox"
+              class="form-check-input remember-me"
+              id="rememberMe"
+            />
+            <label class="form-check-label" for="rememberMe"
+              >Agree with
+              <a href="#" class="forgot-pass">Terms & Conditions</a></label
+            >
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary submit-btn w-50 login-btn">
+          Sign Up
+        </button>
+        <p>Already have an account?<a href="#">Login</a></p>
+      </form>
+    </section>
+    <p class="or">Or</p>
+    <div class="social-login mb-3 w-100 d-flex align-items-center">
+      <button type="button" class="btn btn-primary submit-btn w-50 google-btn">
+        <img src="./images/Google.png" alt="Google" />
+        Google
+      </button>
+      <button
+        type="button"
+        class="btn btn-primary submit-btn w-50 facebook-btn w-50"
+      >
+        <img src="./images/facebook-blue.png" alt="Facebook" />
+        Facebook
+      </button>
+    </div>
+    <footer class="footer">
+      <div class="footer-top">
+        <!-- Left: Logo + Nav -->
+        <div class="footer-left">
+          <a href="#" class="footer-logo">
+            <img
+              src="./images/book.png"
+              alt="Bookshop Logo"
+              class="footer-logo-img"
+            />
+            <span>Bookshop</span>
+          </a>
+          <nav class="footer-nav">
+            <a href="#">Home</a>
+            <a href="#">Books</a>
+            <a href="#">About Us</a>
+          </nav>
+        </div>
+        <div class="footer-right">
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook">
+              <img src="images/facebook.png" alt="Facebook" />
+            </a>
+            <a href="#" aria-label="Instagram">
+              <img src="images/insta.png" alt="Instagram" />
+            </a>
+            <a href="#" aria-label="YouTube">
+              <img src="images/yotube.png" alt="YouTube" />
+            </a>
+            <a href="#" aria-label="X (Twitter)">
+              <img src="images/x.png" alt="X (Twitter)" />
+            </a>
+          </div>
+          <!-- Language Selector -->
+        </div>
+      </div>
+      <!-- Bottom: Copyright -->
+      <div class="footer-bottom">
+        <p>Developed By EraaSoft — All Rights Reserved © 2024</p>
+        <!-- Right: Social + Language -->
+        <div class="language">
+          <img src="images/earth.png" />
+          <div class="language-selector">
+            <!-- Globe SVG -->
+            <select aria-label="Language">
+              <option value="en">English</option>
+              <option value="ar">العربية</option>
+              <option value="fr">Français</option>
+            </select>
+            <!-- Right arrow SVG -->
+            <svg
+              class="lang-arrow"
+              xmlns="http://www.w3.org/2000/svg"
+              width="10"
+              height="10"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+
+    <script src="./js/sign-up.js"></script>
+  </body>
+</html>

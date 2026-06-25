@@ -1,0 +1,52 @@
+.cheildren{
+    background-color: rgb(32, 41, 41);
+position: relative;
+counter-increment: members-counter;
+}
+h2{
+    /* visibility: hidden;     */
+}
+.one {
+color: blueviolet;
+font-size: 20px;
+margin: 10px;
+padding: 20px   ;
+background-color: rgb(252, 236, 236);
+box-sizing: border-box;
+
+
+/* display: none; */
+}
+.one::first-letter{
+   
+    display: inline-block;
+   color: rgb(255, 255, 255);
+font-size: 75px;
+background-color: rgb(251, 124, 5);
+
+}
+.one::after{
+    content: counter(members-counter);
+    background-color: chocolate;
+    color: black;
+    font-size: medium;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+ position: absolute;
+   right: -15px;
+}
+.circle{
+    margin: auto;
+    background-color: brown;
+    height: 250px;
+    width: 250px;
+    transition-duration: .5s; 
+    /* transition-delay: .5s; */
+    transition-property: border-radius;
+    transition-timing-function:ease-in;
+}
+.circle:hover{
+
+    border-radius: 50%; 
+}

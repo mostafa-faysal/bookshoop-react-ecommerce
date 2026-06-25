@@ -1,0 +1,59 @@
+section{
+    max-height: 100vh;
+    margin-block: 13rem;
+    font-family: Barlow;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+text-transform: capitalize;
+flex-direction: column ;
+}
+.card-container{
+width: 30%;
+}
+h1{
+    font-family: Barlow;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 32px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+text-transform: capitalize;
+color: #1576D6;
+}
+.result{
+    font-family: Barlow;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 18px;
+text-transform: capitalize;
+border: 1px solid #F4C123;
+border-radius: 12px;
+padding: 12px 16px;
+}
+.input-lable{
+    font-family: Barlow;
+font-weight: 500;
+font-style: Medium;
+font-size: 16px;
+text-transform: capitalize;
+}
+.deatils::placeholder{
+    font-family: Barlow;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+text-transform: capitalize;
+color:  #6C757D80;
+}
+.calc-btn{
+    width: 361;
+height: 50;
+angle: 0 deg;
+opacity: 1;
+border-radius: 12px;
+padding: 12px 16px;
+background: #25292C;
+
+}

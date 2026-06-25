@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Chau+Philomene+One:ital@0;1&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/after-login.css" />
+  <title>Book Store</title>
+</head>
+
+<body>
+  <header class="my-container d-flex">
+    <div class="navbar w-100 align-items-center d-flex">
+      <div class="logo">
+        <img src="./images/logo.png" alt="Logo" />
+      </div>
+      <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse" id="mainNav">
+        <nav>
+          <ul class="nav-links d-flex">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="books.html">Books</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+        <div class="mobile-nav-actions">
+         <div class="button-container ">
+              <a href="login.html"> <button class="primary-btn login-btn">Login</button></a> 
+               <a href="signup.html"> <button class="primary-btn btn-sign-up">Sign Up </button></a>
+              </div>
+        </div>
+      </div>
+      <div class="after-login d-flex">
+
+        <div class="button-container">
+                <button class="primary-btn login-btn">Login</button>
+                <button class="primary-btn btn-sign-up">Sign Up </button>
+              </div>
+      </div>
+  </header>
+
+  <section class="hero-section">
+    <div class="discription">
+      <h2>Discover Your Next Great Read!</h2>
+      <p>
+        Browse our extensive collection of books and find your next favorite
+        title.
+      </p>
+    </div>
+    <div class="search-input">
+      <input type="text" placeholder="Search For Books..." />
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path fill="currentColor"
+            d="M9.875 13.125Q9 12.25 9 11V5q0-1.25.875-2.125T12 2t2.125.875T15 5v6q0 1.25-.875 2.125T12 14t-2.125-.875M11 21v-3.075q-2.6-.35-4.3-2.325T5 11h2q0 2.075 1.463 3.538T12 16t3.538-1.463T17 11h2q0 2.625-1.7 4.6T13 17.925V21zm1.713-9.287Q13 11.425 13 11V5q0-.425-.288-.712T12 4t-.712.288T11 5v6q0 .425.288.713T12 12t.713-.288" />
+        </svg>
+      </span>
+      <button class="search-btn">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </div>
+  </section>
+
+  <section class="services-section">
+    <div class="my-container g-4">
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+          <div class="service p-4">
+            <img src="./images/car.png" alt="hipping" />
+            <h2 class="mt-3 mb-2">Fast & Reliable Shipping</h2>
+            <p class="mb-0 text-center text-md-start">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+              et ultricies est. Aliquam in justo varius, sagittis neque ut,
+              malesuada leo.
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+          <div class="service p-4">
+            <img src="./images/credit-card-buyer 1.png" alt="hipping" />
+            <h2 class="mt-3 mb-2">Secure Payment</h2>
+            <p class="mb-0 text-center text-md-start">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+              et ultricies est. Aliquam in justo varius, sagittis neque ut,
+              malesuada leo.
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+          <div class="service p-4">
+            <img src="./images/restock 1.png" alt="hipping" />
+            <h2 class="mt-3 mb-2">Easy Returns</h2>
+            <p class="mb-0 text-center text-md-start">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+              et ultricies est. Aliquam in justo varius, sagittis neque ut,
+              malesuada leo.
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+          <div class="service p-4">
+            <img src="./images/user-headset 1.png" alt="hipping" />
+            <h2 class="mt-3 mb-2">Fast & Reliable Shipping</h2>
+            <p class="mb-0 text-center text-md-start">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+              et ultricies est. Aliquam in justo varius, sagittis neque ut,
+              malesuada leo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="books-section d-flex justify-content-center align-items-center flex-column">
+    <div class="Best-seller d-flex justify-content-center align-items-center flex-column">
+      <h2>Best Seller</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et
+        ultricies est. Aliquam in justo varius, sagittis neque ut, malesuada
+        leo.
+      </p>
+    </div>
+    <div class="my-container g-4">
+      <div class="row container-books">
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3 container-book">
+          <div class="book p-4">
+            <img src="./images/Power-Of-48.png" alt="Book 1" />
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3 container-book">
+          <div class="book p-4">
+            <img src="./images/Power-Of-48.png" alt="Book 1" />
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3 container-book">
+          <div class="book p-4">
+            <img src="./images/Power-Of-48.png" alt="Book 1" />
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3 container-book">
+          <div class="book p-4">
+            <img src="./images/Power-Of-48.png" alt="Book 1" />
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3 container-book">
+          <div class="book p-4">
+            <img src="./images/Power-Of-48.png" alt="Book 1" />
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3 container-book">
+          <div class="book p-4">
+            <img src="./images/Power-Of-48.png" alt="Book 1" />
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3 container-book">
+          <div class="book p-4">
+            <img src="./images/Power-Of-48.png" alt="Book 1" />
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3 container-book">
+          <div class="book p-4">
+            <img src="./images/Power-Of-48.png" alt="Book 1" />
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3 container-book">
+          <div class="book p-4">
+            <img src="./images/Power-Of-48.png" alt="Book 1" />
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3 container-book">
+          <div class="book p-4">
+            <img src="./images/Power-Of-48.png" alt="Book 1" />
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3 container-book">
+          <div class="book p-4">
+            <img src="./images/Power-Of-48.png" alt="Book 1" />
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3 container-book">
+          <div class="book p-4">
+            <img src="./images/Power-Of-48.png" alt="Book 1" />
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3 container-book">
+          <div class="book p-4">
+            <img src="./images/Power-Of-48.png" alt="Book 1" />
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3 container-book">
+          <div class="book p-4">
+            <img src="./images/Power-Of-48.png" alt="Book 1" />
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3 container-book">
+          <div class="book p-4">
+            <img src="./images/Power-Of-48.png" alt="Book 1" />
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3 container-book">
+          <div class="book p-4">
+            <img src="./images/Power-Of-48.png" alt="Book 1" />
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3 container-book">
+          <div class="book p-4">
+            <img src="./images/Power-Of-48.png" alt="Book 1" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class=" shop-btn d-flex justify-content-center align-items-center">Shop now</button>
+  </section>
+  <section class="about-section">
+    <h2 class="recomended">Recomended For You</h2>
+    <div class=" container-about">
+      <div class="row">
+        <div class="col-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+          <div class="book-container d-flex flex-row ">
+            <div class="img-book">
+              <img src="./images/Poor-Dad.png" alt="Book 1" />
+            </div>
+            <div class="about-container">
+              <div class="about-content">
+                <h2>Rich Dad And Poor Dad</h2>
+                <p class="name"><span>Author:</span> Robert Kiyosaki</p>
+                <p class="discriptions">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et ultricies
+                  est. Aliquam in justo varius,
+                  sagittis neque ut, malesuada leo. Aliquam in justo varius, Aliquam in justo varius,</p>
+              </div>
+              <div class="review-container d-flex">
+                <div class="review">
+                  <p class="rate"> <img src="./images/rate.png" alt="rate"><span>(180 Review)</span></p>
+                  <div class="d-flex">
+                    <p class="rate-dgr">Rate:</p>
+                    <span class="rate-dgr-number">4.2</span>
+                  </div>
+                </div>
+                <p class="salary">$30.00</p>
+              </div>
+              <div class="button-container">
+                <button class="primary-btn add-to">Add to Cart<img class="m-2" src="./images/basket.png"
+                    alt="basket"></button>
+                <button class="primary-btn btn-favorite"><img src="./images/fav.png" alt="favorite"> </button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+             <div class="col-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6"> 
+          <div class="book-container d-flex flex-row ">
+            <div class="img-book">
+              <img src="./images/Poor-Dad.png" alt="Book 1" />
+            </div>
+            <div class="about-container">
+              <div class="about-content">
+                <h2>Rich Dad And Poor Dad</h2>
+                <p class="name"><span>Author:</span> Robert Kiyosaki</p>
+                <p class="discriptions">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et ultricies
+                  est. Aliquam in justo varius,
+                  sagittis neque ut, malesuada leo. Aliquam in justo varius, Aliquam in justo varius,</p>
+              </div>
+              <div class="review-container d-flex">
+                <div class="review">
+                  <p class="rate"> <img src="./images/rate.png" alt="rate"><span>(180 Review)</span></p>
+                  <div class="d-flex">
+                    <p class="rate-dgr">Rate:</p>
+                    <span class="rate-dgr-number">4.2</span>
+                  </div>
+                </div>
+                <p class="salary">$30.00</p>
+              </div>
+              <div class="button-container">
+                <button class="primary-btn add-to">Add to Cart<img class="m-2" src="./images/basket.png"
+                    alt="basket"></button>
+                <button class="primary-btn btn-favorite"><img src="./images/fav.png" alt="favorite"> </button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="flash-sale-section">
+    <div class="container">
+      <div class="coulome">
+        <div class="flash-sale-deatils d-flex justify-content-between">
+          <div class="flash-sale-right">
+            <h3>Flash Sale</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Mauris et ultricies est.
+              Aliquam in justo varius, sagittis neque ut,malesuada leo.
+            </p>
+          </div>
+
+          <div class="flash-sale-timer" role="timer" aria-live="polite">
+            <span class="flash-sale-timer__dot" aria-hidden="true"></span>
+            <span class="flash-sale-timer__time">30:00:00</span>
+          </div>
+        </div>
+
+        <div class="swiper-outer-wrapper">
+          <button class="swiper-nav-btn swiper-prev" id="flashSalePrev" aria-label="Previous slide">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+
+
+          <div class="swiper-track-wrapper">
+            <div class="swiper-flash-sale" id="flashSaleTrack">
+              <div class="card card-swiper">
+                <div class="card-img-top">
+                  <img src="./images/Poor-Dad.png" class="card-img" alt="Rich Dad And Poor Dad">
+                </div>
+                <div class="card-body">
+                  <div class="about-content name-book">
+                    <h2>Rich Dad And Poor Dad</h2>
+                    <p><span>Author:</span> Robert Kiyosaki</p>
+                  </div>
+                  <div class="review-container d-flex">
+                    <div class="review">
+                      <div class="d-flex">
+                        <p class="rate-dgr rate-swiper">Rate:</p>
+                        <span class="rate-dgr-number rate-swiper-number">4.2</span>
+                      </div>
+                      <p class="rate"><img src="./images/rate.png" alt="rate"><span class="rate-swiper">(180
+                          Review)</span></p>
+                    </div>
+                  </div>
+                  <div class="d-flex card-salarys">
+                    <p class="rate-dgr text-salary-card">$45.00</p>
+                    <span class="rate-dgr-number salary-card">$30.00</span>
+                  </div>
+                  <div class="books-left">
+                    <p class="books-left-rate"></p>
+                  </div>
+                  <p class="books-left--rate">4 books left</p>
+                  <div class="button-container justify-content-end">
+                    <button class="primary-btn btn-favorite shop-now"><img class="m-2" src="./images/basket.png"
+                        alt="basket"></button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card card-swiper">
+                <div class="card-img-top">
+                  <img src="./images/Poor-Dad.png" class="card-img" alt="Rich Dad And Poor Dad">
+                </div>
+                <div class="card-body">
+                  <div class="about-content name-book">
+                    <h2>Rich Dad And Poor Dad</h2>
+                    <p><span>Author:</span> Robert Kiyosaki</p>
+                  </div>
+                  <div class="review-container d-flex">
+                    <div class="review">
+                      <div class="d-flex">
+                        <p class="rate-dgr rate-swiper">Rate:</p>
+                        <span class="rate-dgr-number rate-swiper-number">4.2</span>
+                      </div>
+                      <p class="rate"><img src="./images/rate.png" alt="rate"><span class="rate-swiper">(180
+                          Review)</span></p>
+                    </div>
+                  </div>
+                  <div class="d-flex card-salarys">
+                    <p class="rate-dgr text-salary-card">$45.00</p>
+                    <span class="rate-dgr-number salary-card">$30.00</span>
+                  </div>
+                  <div class="books-left">
+                    <p class="books-left-rate"></p>
+                  </div>
+                  <p class="books-left--rate">4 books left</p>
+                  <div class="button-container justify-content-end">
+                    <button class="primary-btn btn-favorite shop-now"><img class="m-2" src="./images/basket.png"
+                        alt="basket"></button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card card-swiper">
+                <div class="card-img-top">
+                  <img src="./images/Poor-Dad.png" class="card-img" alt="Rich Dad And Poor Dad">
+                </div>
+                <div class="card-body">
+                  <div class="about-content name-book">
+                    <h2>Rich Dad And Poor Dad</h2>
+                    <p><span>Author:</span> Robert Kiyosaki</p>
+                  </div>
+                  <div class="review-container d-flex">
+                    <div class="review">
+                      <div class="d-flex">
+                        <p class="rate-dgr rate-swiper">Rate:</p>
+                        <span class="rate-dgr-number rate-swiper-number">4.2</span>
+                      </div>
+                      <p class="rate"><img src="./images/rate.png" alt="rate"><span class="rate-swiper">(180
+                          Review)</span></p>
+                    </div>
+                  </div>
+                  <div class="d-flex card-salarys">
+                    <p class="rate-dgr text-salary-card">$45.00</p>
+                    <span class="rate-dgr-number salary-card">$30.00</span>
+                  </div>
+                  <div class="books-left">
+                    <p class="books-left-rate"></p>
+                  </div>
+                  <p class="books-left--rate">4 books left</p>
+                  <div class="button-container justify-content-end">
+                    <button class="primary-btn btn-favorite shop-now"><img class="m-2" src="./images/basket.png"
+                        alt="basket"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <button class="swiper-nav-btn swiper-next" id="flashSaleNext" aria-label="Next slide">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-top">
+      <!-- Left: Logo + Nav -->
+      <div class="footer-left">
+        <a href="#" class="footer-logo">
+          <img src="./images/book.png" alt="Bookshop Logo" class="footer-logo-img" />
+          <span>Bookshop</span>
+        </a>
+        <nav class="footer-nav">
+          <a href="#" class="active">Home</a>
+          <a href="#">Books</a>
+          <a href="#">About Us</a>
+        </nav>
+      </div>
+      <div class="footer-right">
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook">
+            <img src="images/facebook.png" alt="Facebook" />
+          </a>
+          <a href="#" aria-label="Instagram">
+            <img src="images/insta.png" alt="Instagram" />
+          </a>
+          <a href="#" aria-label="YouTube">
+            <img src="images/yotube.png" alt="YouTube" />
+          </a>
+          <a href="#" aria-label="X (Twitter)">
+            <img src="images/x.png" alt="X (Twitter)" />
+          </a>
+        </div>
+        <!-- Language Selector -->
+
+      </div>
+    </div>
+    <!-- Bottom: Copyright -->
+    <div class="footer-bottom">
+      <p>Developed By EraaSoft — All Rights Reserved © 2024</p>
+      <!-- Right: Social + Language -->
+      <div class="language">
+        <img src="images/earth.png">
+        <div class="language-selector">
+          <!-- Globe SVG -->
+          <select aria-label="Language">
+            <option value="en">English</option>
+            <option value="ar">العربية</option>
+            <option value="fr">Français</option>
+          </select>
+          <!-- Right arrow SVG -->
+          <svg class="lang-arrow" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/after-login.js"></script>
+</body>
+
+</html>

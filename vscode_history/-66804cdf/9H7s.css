@@ -1,0 +1,655 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #f7f7fc;
+    --primary: #D9176C;
+    --primary-white: #FFFFFF;
+    --text-main: #00000080;
+    --text-soft: #c4bfda;
+    --border: 1px solid;
+    --font-family: Open Sans;
+}
+
+section {
+    position: relative;
+    min-height: 38vh;
+    overflow: hidden;
+}
+
+h2 {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 36px;
+    color: var(--primary);
+    text-align: center;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.img1,
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.ul-nav {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+}
+
+.ul-nav .nav-item {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-top: 2px;
+    padding-right: 24px;
+    border-right: var(--border) var(--primary-white)4D;
+}
+
+.logo img {
+    max-height: 48px;
+    display: block;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #222222;
+    font-weight: 600;
+}
+
+.nav-link:hover {
+    color: var(--primary);
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    background: #FFFFFF33;
+
+    z-index: 20;
+}
+
+.navbar .nav-link {
+    color: var(--primary-white);
+}
+
+.login-btn,
+.register-btn {
+    background-color: var(--primary);
+    border: var(--border) var(--primary);
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 16px;
+    transition: all 0.5s ease;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-right: 12px;
+    color: var(--primary-white);
+}
+
+.login-btn:hover {
+    background-color: transparent;
+    border: var(--border) var(--primary);
+    color: var(--primary);
+    transition: all 0.5s ease;
+}
+
+.register-btn {
+    background: var(--primary-white);
+    color: var(--primary);
+}
+
+.register-btn:hover {
+    background-color: var(--primary-white);
+    border: var(--border) var(--primary-white);
+    color: var(--primary);
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 16px;
+    padding: 12px 16px;
+}
+
+h2 {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 36px;
+    color: var(--primary);
+    text-align: center;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 16px;
+    line-height: 21.75px;
+    margin: 60px;
+}
+
+.form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 15px;
+}
+
+.email-input,
+.password-input {
+    border-radius: 8px;
+    border-width: 1px;
+    padding: 16px;
+}
+
+.email-input:focus,
+.password-input:focus {
+    box-shadow: none;
+    border: var(--border) var(--primary);
+}
+
+.email-input,
+.password-input::placeholder {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 21.75px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+
+}
+
+.form-label {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+}
+
+.login-btn {
+    background: var(--primary);
+    border-radius: 8px;
+    padding-top: 12px;
+    padding-right: 16px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+}
+
+.see-pass {
+    display: flex;
+    width: 25%;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 21.75px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #222222;
+    cursor: pointer;
+}
+
+.see-pass img {
+    width: 1%;
+    position: absolute;
+    top: -29px;
+    left: 72%;
+    object-fit: contain;
+}
+
+.forgot-pass {
+    text-decoration: none;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 19.05px;
+    color: var(--primary);
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: var(--border) var(--primary);
+    border-radius: 4px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    background: transparent;
+    transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+input[type="checkbox"]::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
+    line-height: 1;
+    color: var(--primary);
+    display: none;
+}
+
+input[type="checkbox"]:checked {
+    background: var(--primary-white);
+    border-color: var(--primary);
+}
+
+input[type="checkbox"]:checked::after {
+    content: "✓";
+    display: block;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.form-check-input:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+section p {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    color: #222222;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 16px;
+    line-height: 21.75px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+p a {
+    text-decoration: none;
+    color: var(--primary);
+
+}
+
+.social-login {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-top: 30px;
+}
+
+.google-btn,
+.facebook-btn {
+    background: var(--primary-white);
+    border: none;
+    color: #222222;
+    font-family: var(--font-family);
+    box-shadow: 0px 1px 3px 0px #616161e3;
+    border-radius: 8px;
+    padding: 12px 16px;
+}
+
+.google-btn:hover,
+.facebook-btn:hover {
+    color: var(--primary);
+}
+
+.google-btn:active,
+.facebook-btn:active {
+    background: var(--primary-white);
+    border: var(--border) var(--primary-white);
+    color: var(--primary);
+}
+
+.or {
+    text-align: center;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 19.5px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: #00000080;
+    margin-top: 40px;
+}
+
+.footer {
+    background-color: #3b3259;
+    color: var(--text-soft);
+    width: 100%;
+    background: #3B2F4A;
+    padding: 124px 60px;
+    margin-top: 0;
+    height: auto;
+    padding: 0;
+}
+
+.footer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 48px;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    text-decoration: none;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: var(--primary-white);
+}
+
+.footer-logo svg {
+    flex-shrink: 0;
+    color: var(--primary-white);
+}
+
+.footer-nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.footer-nav a {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-decoration: none;
+    color: var(--primary-white);
+    transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+    color: var(--primary-white);
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-soft);
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    line-height: 1;
+}
+
+.social-icons a:hover {
+    color: var(--primary-white);
+}
+
+.language-selector {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: rgba(255, 255, 255, 0.07);
+    border: var(--border) rgba(255, 255, 255, 0.18);
+    border-radius: 4px;
+    padding: 5px 9px 5px 8px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.language-selector:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.globe-icon {
+    color: var(--text-soft);
+    flex-shrink: 0;
+}
+
+.language-selector select {
+    background: transparent;
+    border: none;
+    color: var(--text-soft);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.78rem;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 0;
+    min-width: 48px;
+}
+
+.language-selector select option {
+    background: #3b3259;
+    color: #e2e0ee;
+}
+
+/* Right Arrow SVG */
+.lang-arrow {
+    color: var(--text-soft);
+    flex-shrink: 0;
+}
+
+.footer-bottom {
+    padding: 9px 48px;
+    border-top: var(--border) rgba(255, 255, 255, 0.07);
+    display: flex;
+    justify-content: space-between;
+}
+
+.language {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.language img {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+}
+
+.footer-bottom p {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: bottom;
+    color: var(--primary-white);
+}
+
+/* ══ Responsive ══ */
+@media (max-width: 992px) {
+    .navbar {
+        padding: 16px 40px;
+    }
+
+    .ul-nav {
+        gap: 12px;
+        align-items: center;
+    }
+
+    .logo img {
+        max-width: 140px;
+        height: auto;
+    }
+
+    .navbar>div {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .login-btn,
+    .register-btn {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    .form-section {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .login-form .w-50 {
+        width: 100% !important;
+    }
+
+    .see-pass img {
+        left: 92%;
+        top: -26px;
+    }
+
+    .social-login {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .social-login .social-btn {
+        flex: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-top {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 24px;
+        gap: 16px;
+    }
+
+    .footer-right {
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .footer-bottom {
+        padding: 10px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        padding: 12px 16px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .ul-nav {
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 6px;
+        margin-bottom: 6px;
+    }
+
+    .nav-item.logo {
+        padding-right: 0;
+        border-right: none;
+        margin-bottom: 6px;
+    }
+
+    .ul-nav .nav-item {
+        flex: 1 1 auto;
+        text-align: left;
+    }
+
+    .navbar>div {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .login-btn,
+    .register-btn {
+        width: 48%;
+    }
+
+    h2 {
+        font-size: 28px;
+        margin-top: 20px;
+    }
+
+    .form-section {
+        padding: 8px;
+    }
+
+    .social-login {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .social-login .social-btn {
+        width: 100%;
+    }
+}

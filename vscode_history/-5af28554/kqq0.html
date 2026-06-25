@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Chau+Philomene+One:ital@0;1&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Book Store</title>
+  </head>
+
+  <body>
+    <header class="my-container d-flex">
+      <div class="navbar w-100 align-items-center d-flex">
+        <div class="logo">
+          <img src="./images/logo.png" alt="Logo" />
+        </div>
+        <button
+          class="navbar-toggler ms-3"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse" id="mainNav">
+          <nav>
+            <ul class="nav-links d-flex">
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="books.html">Books</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </nav>
+          <div class="mobile-nav-actions">
+            <a
+              href="#"
+              class="btn btn-link text-white position-relative mobile-nav-actions__icon"
+              title="Favorites"
+            >
+              <i class="fa-solid fa-heart fa-lg"></i>
+              <span
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                >0</span
+              >
+            </a>
+            <a
+              href="#"
+              class="btn btn-link text-white position-relative mobile-nav-actions__icon"
+              title="Cart"
+            >
+              <i class="fa-solid fa-shopping-cart fa-lg"></i>
+              <span
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                >0</span
+              >
+            </a>
+            <div class="mobile-user-in-nav">
+              <div class="dropdown">
+                <button
+                  class="btn btn-link text-white d-flex align-items-center p-0"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="./images/profile.jpg"
+                    alt="User"
+                    class="mobile-user-in-nav__avatar"
+                  />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    class="mobile-user-in-nav__chevron"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                      d="m6 7l6 6l6-6l2 2l-8 8l-8-8z"
+                    />
+                  </svg>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end p-2">
+                  <li>
+                    <ul class="list-unstyled mb-0">
+                      <li class="py-1">John Smith</li>
+                      <li class="py-1">Johnsmith@gmail.com</li>
+                    </ul>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="./profile.html">Profile</a>
+                  </li>
+                  <li class="logout">
+                    <a class="dropdown-item logout">Logout</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="after-login d-flex">
+          <div class="profile d-none d-md-flex align-items-center gap-3">
+            <a
+              href="#"
+              class="btn btn-link text-white position-relative"
+              title="Favorites"
+            >
+              <i class="fa-solid fa-heart fa-lg"></i>
+              <span
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                >0</span
+              >
+            </a>
+            <a
+              href="#"
+              class="btn btn-link text-white position-relative"
+              title="Cart"
+            >
+              <i class="fa-solid fa-shopping-cart fa-lg"></i>
+              <span
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                >0</span
+              >
+            </a>
+          </div>
+        </div>
+        <div class="profile d-none d-md-flex align-items-center">
+          <div class="profile-image">
+            <div class="online-mark"></div>
+            <img src="./images/profile.jpg" alt="User Profile" />
+          </div>
+          <div>
+            <h3>John Smith</h3>
+            <p>Johnsmith@gmail.com</p>
+          </div>
+          <div class="dropdown ms-1 mb-3">
+            <button
+              class="btn btn-link text-white p-0"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="m6 7l6 6l6-6l2 2l-8 8l-8-8z"
+                />
+              </svg>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li class="dropdown-item-text">John Smith</li>
+              <li class="dropdown-item-text">Johnsmith@gmail.com</li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" href="./profile.html">Profile</a>
+              </li>
+              <li class="logout"><a class="dropdown-item logout">Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+  </body>
+</html>

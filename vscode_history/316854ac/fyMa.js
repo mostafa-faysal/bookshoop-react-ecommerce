@@ -1,0 +1,63 @@
+// Swiper
+
+const swiper = new Swiper(".mySwiper", {
+  slidesPerView: 5,
+  spaceBetween: 5,
+});
+
+const getAllData = () => {
+  fetch("https://api.codingarabic.online/api/books")
+    .then((res) => res.json())
+    .then((data) => {
+      displayData(data.data);
+    });
+};
+
+getAllData();
+
+const getAllCategories = () => {
+  fetch("https://bookstore.eraasoft.pro/api/category")
+    .then((res) => res.json())
+    .then((data) => {
+      displayCategories(data.data.items);
+    });
+};
+
+getAllCategories();
+
+function displayCategories(categories) {
+  categories.forEach((category) => {
+    document.querySelector(".swiper-wrapper").innerHTML += `
+         <div class="swiper-slide swiper-category ">${category.categoryName}</div>
+    `;    category.onclick = () => {
+      category.classList.toggle("background")
+    }
+  });
+  let allCategories = document.querySelector(".swiper-wrapper");
+  allCategories.addEventListener("click", function (e) {
+    if (e.target.classList.contains("swiper-category")) {
+      let allCategories = document.querySelectorAll(".swiper-category");
+      allCategories.forEach(item => {
+        item.classList.remove("background")
+        e.target.classList.add("background")
+      });
+    }
+  });
+}
+
+const booksContainer = document.querySelector(".books-container");
+function displayData(books) {
+  books.length > 0
+    ? books.forEach((book) => {
+        booksContainer.innerHTML += `
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card p-3">
+
+                <div class="card-img-top">
+
+    </div>
+        `;
+      })
+    : (document.querySelector(".books-container").innerHTML =
+        `<h2>No Products</h2>`);
+}

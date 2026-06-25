@@ -1,0 +1,18 @@
+import { createContext } from "react";
+export const IdContext = createContext();
+export default function IdProvider() {
+    const [id, setId] = useState([
+        {
+            id: 1
+        },
+        {
+            id: 2
+        },
+        {
+            id: 3
+        }
+    ]);
+  return (
+    <div>IdProvider</div>
+  )
+}

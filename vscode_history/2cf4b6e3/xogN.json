@@ -1,0 +1,225 @@
+{
+  "articals": [
+    {
+      "id": "1",
+      "title": "title one",
+      "decription": "post one"
+    },
+    {
+      "id": "2",
+      "title": "title two",
+      "description": "post two"
+    },
+    {
+      "id": "3",
+      "title": "title three",
+      "description": "post three"
+    },
+    {
+      "id": "4",
+      "title": "title four",
+      "description": "post four"
+    },
+    {
+      "id": "5",
+      "title": "title five",
+      "description": "post five"
+    },
+    {
+      "title": "wxs",
+      "description": "asADCS",
+      "id": "4UG7QGjNPbU"
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": "9msUlflK0bw"
+    },
+    {
+      "title": "nnnn  ",
+      "description": "    n",
+      "id": "aPKtuNzR8GY"
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": "a2VOV4bYngA"
+    },
+    {
+      "title": "vbnm,./",
+      "description": "hb jnm,.",
+      "id": "C6YKaUb9pIg"
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": "R7ueWYCycCU"
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": "5fqMkRBLjqA"
+    },
+    {
+      "title": "zZx",
+      "description": "zx",
+      "id": "TLPixVyq7pU"
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": "vv_COKgYyQU"
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": "SGTWYtkybdg"
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": "59Wq8RLL9a8"
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": "L_97GBGxjCc"
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": "cZ8zH2TdaAc"
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": "lsyMyzjydXQ"
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": "4OYjP-owXjE"
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": "ekpZ6Z-U4ww"
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": "MBPdxC0GrI4"
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": "kyqs4Yk1O04"
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": "yodTKT2SJeI"
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": "3VpSmeZqLf8"
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": "Ws_iu5W8xHI"
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": "kNKffdiaFAw"
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": "Bu5RE3Zc6kQ"
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": "AqHiOg3rZEo"
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": "VxkKzcQQrKw"
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": "dAEIJk7dUSI"
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": "ESvGW6EpMgo"
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": "2kYQpx0AcJo"
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": "-Te2c3IMNWk"
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": "XgLPQBKn61g"
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": "aMlJc0gySkM"
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": "1208uRSM2Yg"
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": "AE3-JHQjQc4"
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": "_B_HISamiK0"
+    },
+    {
+      "title": "mostafa",
+      "description": "faysal",
+      "id": "1szfLwm6E0U"
+    },
+    {
+      "title": "mo1",
+      "description": "011",
+      "id": "rJ0yqn-UKMk"
+    }
+  ],
+  "users": [
+    {
+      "name": "ahmed",
+      "jopTitle": "front-end",
+      "phone": "01098774752",
+      "active": true,
+      "id": "HMGTMooiZbc"
+    }
+    {
+      "name": "ahmed",
+      "jopTitle": "front-end",
+      "phone": "01098774752",
+      "active": true
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

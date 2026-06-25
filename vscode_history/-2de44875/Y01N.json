@@ -1,0 +1,16 @@
+{
+    "liveServer.settings.donotVerifyTags": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.formatOnSave": false,
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "formulahendry.auto-close-tag",
+    "editor.formatOnPaste": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.colorTheme": "Visual Studio Light"
+}

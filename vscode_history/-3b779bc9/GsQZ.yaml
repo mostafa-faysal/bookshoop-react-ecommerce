@@ -1,0 +1,22 @@
+name: Local Config
+version: 1.0.0
+schema: v1
+models:
+  - title: Gemini 1.5 Pro
+    provider: gemini
+    model: gemini-1.5-pro
+    apiKey: "curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent" \
+  -H 'Content-Type: application/json' \
+  -H 'X-goog-api-key: AIzaSyCFcaWPZazWzX6il2d_J2HvZFdIvlFC9UQ' \
+  -X POST \
+  -d '{
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "Explain how AI works in a few words"
+          }
+        ]
+      }
+    ]
+  }'"

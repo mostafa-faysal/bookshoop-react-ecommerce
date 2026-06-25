@@ -1,0 +1,32 @@
+{
+    "liveServer.settings.donotVerifyTags": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "formulahendry.auto-close-tag",
+    "editor.formatOnPaste": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.editor.empty.hint": "hidden",
+    "js/ts.tsserver.web.projectWideIntellisense.suppressSemanticErrors": true,
+    "path-intellisense.autoTriggerNextSuggestion": true,
+    "path-intellisense.extensionOnImport": true,
+    "chat.editing.explainChanges.enabled": true,
+    "github.copilot.chat.languageContext.fix.typescript.enabled": true,
+    "github.copilot.chat.languageContext.inline.typescript.enabled": true,
+    "chat.disableAIFeatures": true,
+    "claudeCode.preferredLocation": "panel",
+    "codeium.enableCodeLens": false,
+    "files.autoSave": "onFocusChange",
+    "editor.formatOnSave": true
+}

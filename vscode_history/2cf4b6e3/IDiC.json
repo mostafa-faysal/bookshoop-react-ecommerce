@@ -1,0 +1,71 @@
+{
+  "articals": [
+    {
+      "id": "1",
+      "title": "title one",
+      "decription": "post one"
+    },
+    {
+      "id": "2",
+      "title": "title two",
+      "description": "post two"
+    },
+    {
+      "id": "3",
+      "title": "title three",
+      "description": "post three"
+    },
+    {
+      "id": "4",
+      "title": "title four",
+      "description": "post four"
+    },
+    {
+      "id": "5",
+      "title": "title five",
+      "description": "post five"
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": "TsXNOjMJ_34"
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": "02oFmGrl3gk"
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": "ce61sCWPHbg"
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": "QTwqC_EOjM4"
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": "UeUHCy6J0E4"
+    }
+  ],
+  "users": [
+    {
+      "name": "mostafa",
+      "jopTitle": "front-end",
+      "phone": "01153378016",
+      "active": true,
+      "id": "MqdW8iATDNQ"
+    },
+    {
+      "name": "faysal",
+      "jopTitle": "back-end",
+      "phone": "01098774752",
+      "active": true,
+      "id": "etFciICVzv8"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

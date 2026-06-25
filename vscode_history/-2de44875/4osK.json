@@ -1,0 +1,10 @@
+{
+    "liveServer.settings.donotVerifyTags": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "window.zoomLevel": -1,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "formulahendry.auto-close-tag",
+    "editor.formatOnPaste": true
+}
