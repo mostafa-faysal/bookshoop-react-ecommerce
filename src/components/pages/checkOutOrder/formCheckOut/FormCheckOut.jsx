@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { useSubmitCheckout } from "../../../../hooks/useSubmitCheckout";
 import Payment from "../payment/Payment";
+
 export default function FormCheckOut() {
   const refName = useRef();
   const refPhone = useRef();
