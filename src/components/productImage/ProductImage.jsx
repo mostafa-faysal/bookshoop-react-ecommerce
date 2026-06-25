@@ -1,13 +1,16 @@
 import { Link } from "react-router-dom";
 
-export default function ProductImage({ image, title, id }) {
+export default function ProductImage({ image, title, id, imgClassName = "" }) {
   return (
-    <figure className="flex justify-center h-full rounded-2xl">
+    <Link
+      to={`/books/${id}`}
+      className="flex justify-center w-full h-full rounded-2xl"
+    >
       <img
         src={image}
         alt={title}
-        className="w-full h-full rounded-2xl shadow-xl"
+        className={`w-full h-full rounded-2xl ${imgClassName}`}
       />
-    </figure>
+    </Link>
   );
 }

@@ -8,25 +8,25 @@ export default function InfoFlashSale({ book }) {
   const rate = rateData?.rating;
   return (
     <div className="flex p-0">
-      <div className="flex flex-col gap-0 md:gap-8">
-        <h2 className="text-xl font-bold text-white">
+      <div className="flex flex-col gap-2 md:gap-3">
+        <h2 className="text-lg md:text-xl font-bold text-white leading-tight">
           <span className="line-clamp-2">{book.title}</span>
         </h2>
-        <div className="flex flex-col gap-0 md:gap-3">
-          <div className="flex justify-start my-2">
+        <div className="flex flex-col gap-2">
+          <div className="flex justify-start">
             <ProductRating rating={rate} />
           </div>
-          <div>
+          <div className="flex flex-col gap-1">
             <progress
-              className="w-56 progress text-[#EAA451]"
+              className="w-full max-w-[14rem] progress text-[#EAA451] h-1.5"
               value="70"
               max="100"
             ></progress>
-            <p className="text-[#FFFFFF80] text-[12px]">4 books left</p>
+            <p className="text-[#FFFFFF80] text-[11px] md:text-xs">4 books left</p>
           </div>
-          <div className="flex flex-col md:mt-4 md:gap-1">
-            <p className="font-semibold text-[#222222] text-[20px] flex flex-row items-end gap-2 line-clamp-2">
-              <span className="text-[#FFFFFF80] line-through text-[14px]">
+          <div className="flex flex-col mt-1">
+            <p className="font-semibold text-[#222222] text-[18px] md:text-[20px] flex flex-row items-end gap-2 line-clamp-1">
+              <span className="text-[#FFFFFF80] line-through text-[13px] md:text-[14px]">
                 {book?.price}
               </span>
               <span className="text-white">

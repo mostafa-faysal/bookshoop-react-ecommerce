@@ -1,12 +1,11 @@
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { useQueryClient } from "@tanstack/react-query";
-import toast from "react-hot-toast";
 import Payment from "../payment/Payment";
+import { useSubmitCheckout } from "../../../../hooks/useSubmitCheckout";
 
 export default function FormCheckOut() {
   const navigate = useNavigate();
-  const queryClient = useQueryClient();
+  const checkoutMutation = useSubmitCheckout();
   const refName = useRef();
   const refPhone = useRef();
   const refEmail = useRef();
@@ -20,11 +19,20 @@ export default function FormCheckOut() {
         className="flex flex-col gap-8 p-4 w-full border py-15 bg-base-200 border-base-300 rounded-box"
         onSubmit={(e) => {
           e.preventDefault();
+          const data = {
+            customerName: refName.current.value,
+            customerEmail: refEmail.current.value,
+            customerPhone: refPhone.current.value,
+            customerAddress: refCountry.current.value,
+            notes: refNote.current.value,
+          };
 
-          localStorage.setItem("forceEmptyCart", "true");
-          queryClient.setQueryData(["cart"], []);
-          toast.success("Checkout successful! Your order has been placed.");
-          navigate("/books");
+          checkoutMutation.mutate(data, {
+            onSuccess: () => {
+              localStorage.setItem("forceEmptyCart", "true");
+              navigate("/");
+            },
+          });
         }}
       >
         <h2 className="text-xl font-bold text-gray-800">
@@ -36,6 +44,7 @@ export default function FormCheckOut() {
             <input
               ref={refName}
               type="text"
+              required
               className="w-full input"
               placeholder="Enter Your Name"
             />
@@ -45,6 +54,7 @@ export default function FormCheckOut() {
             <input
               ref={refPhone}
               type="number"
+              required
               className="w-full input [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
               placeholder="Enter Your Phone"
             />
@@ -56,6 +66,7 @@ export default function FormCheckOut() {
             <input
               ref={refEmail}
               type="email"
+              required
               className="w-full input"
               placeholder="Enter Your Email"
             />
@@ -65,6 +76,7 @@ export default function FormCheckOut() {
             <input
               ref={refCountry}
               type="text"
+              required
               className="w-full input"
               placeholder="Enter Your Country"
             />
