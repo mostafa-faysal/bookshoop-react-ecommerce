@@ -30,6 +30,7 @@ mutationFn: async ({ bookId, qty = 1 }) => {
     }
 },
 onSuccess: (data) => {
+    localStorage.removeItem("forceEmptyCart");
     queryClient.invalidateQueries({ queryKey: ["cart"] });
     toast.success("Book added to cart successfully");
 } ,

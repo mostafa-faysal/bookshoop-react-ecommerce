@@ -22,8 +22,8 @@ export default function FormCheckOut() {
           e.preventDefault();
           
           // محاكاة نجاح الطلب لأنه لا يوجد API حالياً
+          localStorage.setItem("forceEmptyCart", "true");
           queryClient.setQueryData(["cart"], []);
-          queryClient.invalidateQueries({ queryKey: ["cart"] });
           toast.success("Checkout successful! Your order has been placed.");
           navigate("/books");
         }}
