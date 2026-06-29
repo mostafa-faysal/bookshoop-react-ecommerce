@@ -26,7 +26,7 @@ export default function Features() {
     },
   ];
   return (
-    <div className="grid grid-cols-12 gap-4 font-sans md:mx-15 py-30 features">
+    <div className="grid grid-cols-12 gap-4 py-20 font-sans md:mx-15 features">
       {featuresData.map((feature, index) => (
         <div
           key={index}

@@ -17,7 +17,7 @@ export default function FlashSaleHeaderRight() {
     <>
       <div className="grid grid-flow-col auto-cols-max gap-5 text-center">
         <div className="flex flex-col p-2  rounded-box text-neutral-content bg-[#D9176C]">
-          <span className="font-mono text-5xl countdown">
+          <span className="font-mono text-3xl lg:text-4xl countdown">
             <span
               style={{ "--value": hours, "--digits": 2 }}
               aria-live="polite"
@@ -26,7 +26,7 @@ export default function FlashSaleHeaderRight() {
           hours
         </div>
         <div className="flex flex-col p-2 bg-[#D9176C] rounded-box text-neutral-content">
-          <span className="font-mono text-5xl countdown">
+          <span className="font-mono text-3xl lg:text-4xl countdown">
             <span
               style={{ "--value": minutes, "--digits": 2 }}
               aria-live="polite"
@@ -35,7 +35,7 @@ export default function FlashSaleHeaderRight() {
           min
         </div>
         <div className="flex flex-col p-2 bg-[#D9176C] rounded-box text-neutral-content">
-          <span className="font-mono text-5xl countdown">
+          <span className="font-mono text-3xl lg:text-4xl countdown">
             <span
               style={{ "--value": seconds, "--digits": 2 }}
               aria-live="polite"

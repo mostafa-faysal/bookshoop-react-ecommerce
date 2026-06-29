@@ -1,5 +1,6 @@
 import HeroSection from "../../heroSection/HeroSection";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import BestSeller from "./bestSeller/BestSeller";
 import FlashSale from "./flashSale/FlashSale";
 import Recomended from "./recomended/Recomended";
@@ -9,7 +10,17 @@ import Features from "../features/Features";
 
 export default function Home() {
   const [isAlertOpen, setIsAlertOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
   const token = useAuthStore((state) => state.token);
+  const navigate = useNavigate();
+
+  const handleSearchSubmit = (query) => {
+    if (query.trim()) {
+      navigate(`/books?search=${encodeURIComponent(query)}`);
+    } else {
+      navigate(`/books`);
+    }
+  };
 
   useEffect(() => {
     if (!token) {
@@ -27,6 +38,9 @@ export default function Home() {
           heightClass="h-[60vh]"
           showSearch={true}
           showDescription={false}
+          searchQuery={searchQuery}
+          setSearchQuery={setSearchQuery}
+          onSearchSubmit={handleSearchSubmit}
         />
         <Features />
         <BestSeller />

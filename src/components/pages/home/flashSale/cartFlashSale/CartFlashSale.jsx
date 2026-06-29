@@ -40,9 +40,9 @@ export default function CartFlashSale() {
           className="w-full mySwiper"
         >
           {flashSaleBooks.map((book) => (
-            <SwiperSlide key={book.id}>
-              <div className="flex flex-col md:flex-row md:gap-5 gap-3 p-4 w-full bg-[#3B2F4A] shadow-sm items-stretch rounded-2xl mx-auto">
-                <div className="w-full md:w-[45%] aspect-square rounded-2xl shrink-0 flex items-center justify-center bg-white/5 p-2">
+            <SwiperSlide key={book.id} className="!h-auto">
+              <div className="flex flex-col md:flex-row md:gap-5 gap-3 p-4 w-full bg-[#3B2F4A] shadow-sm items-stretch rounded-2xl mx-auto h-full">
+                <div className="w-full md:w-[45%] h-[200px] md:h-auto md:aspect-square rounded-2xl shrink-0 flex items-center justify-center bg-white/5 p-2">
                   <ProductImage
                     image={book.image}
                     title={book.title}

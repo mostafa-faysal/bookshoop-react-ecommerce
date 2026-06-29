@@ -2,6 +2,9 @@ export default function HeroSection({
   heightClass,
   showSearch,
   showDescription,
+  searchQuery,
+  setSearchQuery,
+  onSearchSubmit,
 }) {
   return (
     <section
@@ -12,7 +15,7 @@ export default function HeroSection({
         <div className="flex flex-col flex-1 justify-center items-center md:flex-none">
           {showDescription && (
             <div className="flex flex-col gap-5 justify-center items-center">
-              <h2 className="md:text-4xl text-[24px] font-bold text-white">
+              <h2 className="lg:text-3xl text-[25px] font-bold text-white">
                 Welcome to Bookshop
               </h2>
               <p className="md:text-[24px] text-[16px] text-white text-center font-normal md:w-[60%] w-full font-['Regular']">
@@ -28,15 +31,23 @@ export default function HeroSection({
           )}
         </div>
         {showSearch && (
-          <div className="mb-[22px] flex w-full max-w-xl items-stretch overflow-hidden rounded-full border-2 border-[#D9176C]  md:w-1/3 md:min-w-[400px]">
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              if (onSearchSubmit) onSearchSubmit(searchQuery);
+            }}
+            className="mb-[22px] flex w-full max-w-xl items-stretch overflow-hidden rounded-full border-2 border-[#D9176C]  md:w-1/3 md:min-w-[400px]"
+          >
             <input
               type="search"
+              value={searchQuery || ""}
+              onChange={(e) => setSearchQuery && setSearchQuery(e.target.value)}
               placeholder="Search for books..."
               className="flex-1 px-5 py-3 w-full text-base text-gray-800 bg-white border-0 outline-none placeholder:text-gray-400 focus:border-0 focus:outline-none focus:ring-0"
             />
             <button
-              type="button"
-              className="flex shrink-0 items-center justify-center border-0 bg-[#D9176C] px-5 text-white"
+              type="submit"
+              className="flex shrink-0 items-center justify-center border-0 bg-[#D9176C] px-5 cursor-pointer text-white"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +64,7 @@ export default function HeroSection({
                 />
               </svg>
             </button>
-          </div>
+          </form>
         )}
       </div>
     </section>

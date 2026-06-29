@@ -1,7 +1,7 @@
 export default function ContactIntro() {
   return (
     <div className="flex flex-col gap-2 w-full">
-      <h2 className="text-center text-white text-[30px] md:text-4xl font-bold md:text-left md:w-[65%]">
+      <h2 className="text-center text-white text-[25px] lg:text-3xl font-bold md:text-left md:w-[65%]">
         Have Questions? Get in Touch
       </h2>
       <p className="text-[#FFFFFF80] text-center text-[15px] font-normal font['Regular'] md:text-left md:text-[20px]">

@@ -5,6 +5,7 @@ import { FreeMode, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
+import SwiperBtn from "../../home/flashSale/cartFlashSale/infoFlashSale/swiperbtn/SwiperBtn";
 
 export default function CategorySlider({
   selectedCategory,
@@ -20,7 +21,8 @@ export default function CategorySlider({
   }
 
   return (
-    <div className="py-4">
+    <div className="relative max-w-[85%] md:max-w-[90%] mx-auto flex items-center py-4">
+      <SwiperBtn />
       <Swiper
         slidesPerView="auto"
         spaceBetween={10}
@@ -29,13 +31,16 @@ export default function CategorySlider({
         centerInsufficientSlides={true}
         snapToSlideEdge={true}
         freeMode={true}
-        navigation={true}
-        modules={[FreeMode]}
+        navigation={{
+          nextEl: ".custom-next",
+          prevEl: ".custom-prev",
+        }}
+        modules={[FreeMode, Navigation]}
       >
         <SwiperSlide className="!w-auto md:mx-0  mx-10">
           <div
             onClick={() => setSelectedCategory("")}
-            className={`cursor-pointer px-4 py-2 rounded-full border transition-all ${
+            className={`cursor-pointer min-w-[120px] flex items-center justify-center px-4 py-2 rounded-full border transition-all ${
               selectedCategory === ""
                 ? "bg-[#D9176C] text-white border-[#615f60]"
                 : "bg-white text-black hover:bg-[#D9176C]"
@@ -52,7 +57,7 @@ export default function CategorySlider({
           >
             <div
               onClick={() => setSelectedCategory(category.name)}
-              className={`cursor-pointer px-4 py-2 rounded-full border transition-all ${
+              className={`cursor-pointer min-w-[120px] flex items-center justify-center px-4 py-2 rounded-full border transition-all ${
                 selectedCategory === category.name
                   ? "bg-[#D9176C] text-white border-[#D9176C]"
                   : "bg-white text-black border-[#D9176C] hover:bg-[#D9176C] hover:text-white"

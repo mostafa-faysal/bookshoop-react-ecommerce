@@ -18,16 +18,16 @@ export default function AlertToLogin({ onClose }) {
       onClose={onClose}
     >
       <div className="modal-box">
-        <h3 className="font-bold text-lg">Login Alert</h3>
+        <div className="flex justify-end w-full">
+          <button className="btn btn-circle" onClick={onClose}>
+            X
+          </button>
+        </div>
+        <h3 className="text-lg font-bold">Login Alert</h3>
         <p className="py-4">You must login to continue</p>
         <AuthButtons />
         <div className="modal-action">
-          <form method="dialog">
-            
-            <button className="btn" onClick={onClose}>
-              close
-            </button>
-          </form>
+          <form method="dialog"></form>
         </div>
       </div>
     </dialog>

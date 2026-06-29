@@ -6,7 +6,7 @@ export default function Login() {
     <section className="m-0">
       <HeroSection heightClass="h-[25vh]" />
       <h2
-        className="flex justify-center items-center py-4 text-3xl font-SemiBold
+        className="flex justify-center items-center py-4 text-[25px] lg:text-[30px] font-SemiBold
 
  text-[#D9176C] text-center"
       >

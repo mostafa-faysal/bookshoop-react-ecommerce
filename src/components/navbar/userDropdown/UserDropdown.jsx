@@ -7,7 +7,7 @@ export default function UserDropdown({
 }) {
   return (
     <div className="dropdown dropdown-end">
-      <div tabIndex={0} role="button" className="px-1 btn btn-ghost">
+      <div tabIndex={0} role="button" className="px-1 cursor-pointer hover:bg-transparent focus:bg-transparent">
         <div className="flex gap-1 items-center">
           <div className="avatar indicator">
             <div className="w-10 rounded-full bg-[#D9176C] flex justify-center items-center">

@@ -4,6 +4,7 @@ import MarqueeComponent from "./marqueeComponent/MarqueeComponent";
 import BookCard from "./bookCard/BookCard";
 import Loader from "../../../ui/loader/Loader";
 import ErrorMessage from "../../../ui/errorMessage/ErrorMessage";
+import { Link } from "react-router-dom";
 
 export default function BestSeller() {
   const { data: books, isLoading, isError, error } = useBooks();
@@ -29,9 +30,11 @@ export default function BestSeller() {
         </MarqueeComponent>
       )}
 
-      <button className="btn btn-active btn-secondary text-[16px]">
-        Shop now
-      </button>
+      <Link to={"/books"}>
+        <button className="btn btn-active btn-secondary text-[16px]">
+          Shop now
+        </button>
+      </Link>
     </div>
   );
 }
