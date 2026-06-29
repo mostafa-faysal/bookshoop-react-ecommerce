@@ -18,7 +18,7 @@ export default function Books() {
   return (
     <>
       <HeroSection
-        heightClass="h-[30vh]"
+        heightClass="h-[53vh]"
         showSearch={true}
         showDescription={false}
         searchQuery={searchQuery}
@@ -28,7 +28,10 @@ export default function Books() {
         selectedCategory={selectedCategory}
         setSelectedCategory={setSelectedCategory}
       />
-      <BooksCart selectedCategory={selectedCategory} searchQuery={searchQuery} />
+      <BooksCart
+        selectedCategory={selectedCategory}
+        searchQuery={searchQuery}
+      />
     </>
   );
 }
