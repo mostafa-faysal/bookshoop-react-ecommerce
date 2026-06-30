@@ -15,10 +15,10 @@ export default function RecomendedCart() {
         {error && <ErrorMessage message={error?.message} height="50vh" />}
         {recomendedBooks.map((book) => (
           <div
-            className="flex flex-col md:flex-row gap-4 p-4 md:p-6 md:w-[50%] bg-white shadow-sm items-stretch h-auto md:h-[50vh] mx-auto"
+            className="flex flex-col md:flex-row gap-4 p-4 md:p-6 w-full md:w-[50%] bg-white shadow-sm items-stretch h-auto md:h-[50vh] mx-auto"
             key={book.id}
           >
-            <div className="w-full md:w-[40%] h-[60vh] md:h-auto shrink-0">
+            <div className="w-[70%] md:w-[40%] mx-auto h-[250px] md:h-auto shrink-0">
               <ProductImage
                 image={book.image}
                 title={book.title}
