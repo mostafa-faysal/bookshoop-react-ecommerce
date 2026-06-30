@@ -3,7 +3,6 @@ import { useSearchParams } from "react-router-dom";
 import HeroSection from "../../heroSection/HeroSection";
 import CategorySlider from "./categorySlider/CategorySlider";
 import BooksCart from "./booksCart/BooksCart";
-import TotalCheckOut from "../shopingCart/orderSummary/OrderSummary";
 
 export default function Books() {
   const [searchParams] = useSearchParams();

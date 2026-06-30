@@ -21,7 +21,7 @@ export default function CategorySlider({
   }
 
   return (
-    <div className="relative max-w-[85%] md:max-w-[90%] mx-auto flex items-center py-4">
+    <div className="relative max-w-[85%] md:max-w-[95%] mx-auto flex items-center py-4">
       <SwiperBtn />
       <Swiper
         slidesPerView="auto"

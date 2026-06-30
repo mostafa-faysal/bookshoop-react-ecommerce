@@ -9,13 +9,13 @@ export default function RecomendedCart() {
   const { data, isLoading, error } = useBooks();
   const recomendedBooks = data?.slice(3, 5) || [];
   return (
-    <div className="flex justify-center w-full h-[200vh] md:h-full">
+    <div className="flex justify-center w-full h-auto md:h-full">
       <div className="flex flex-col md:flex-row gap-5 justify-center items-center w-[90%]">
         {isLoading && <Loader height="50vh" />}
         {error && <ErrorMessage message={error?.message} height="50vh" />}
         {recomendedBooks.map((book) => (
           <div
-            className="flex flex-col md:flex-row gap-4 p-4 md:p-6 md:w-[50%] bg-white shadow-sm items-stretch h-[1000vh] md:h-[50vh] mx-auto"
+            className="flex flex-col md:flex-row gap-4 p-4 md:p-6 md:w-[50%] bg-white shadow-sm items-stretch h-auto md:h-[50vh] mx-auto"
             key={book.id}
           >
             <div className="w-full md:w-[40%] h-[60vh] md:h-auto shrink-0">
