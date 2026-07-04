@@ -3,7 +3,7 @@ import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { useRef, useState } from "react";
 import { uselogin } from "../../../../hooks/uselogin";
 import toast from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Inputs() {
   const [showPassword, setShowPassword] = useState(false);
@@ -21,7 +21,7 @@ export default function Inputs() {
       { email, password },
       {
         onSuccess: (data) => {
-          const successMessage = data?.message || "تم تسجيل الدخول بنجاح";
+          const successMessage = data?.message || "Logged in successfully";
           toast.success(successMessage);
           navigate("/");
         },
@@ -29,7 +29,7 @@ export default function Inputs() {
           const errorMessage =
             err?.response?.data?.message ||
             err?.message ||
-            "حدث خطأ أثناء تسجيل الدخول";
+            "An error occurred while logging in";
           toast.error(errorMessage);
         },
       },
@@ -83,6 +83,14 @@ export default function Inputs() {
         <button className="mt-1 btn btn-ghost" type="reset">
           Reset
         </button>
+        <p className="flex justify-center items-center mt-4 text-[13px] gap-1 mt-[-5px]">
+          Don't have an account?
+          <Link to="/register">
+            <span className="font-bold text-[#D9176C] cursor-pointer">
+              Sign Up
+            </span>
+          </Link>
+        </p>
       </form>
     </div>
   );

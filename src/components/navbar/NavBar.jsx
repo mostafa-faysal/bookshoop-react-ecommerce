@@ -18,7 +18,7 @@ export default function NavBar() {
     >
       <div className="flex justify-between items-center px-4 py-2">
         <div className="flex gap-2 items-center sm:gap-4">
-          <NavLogo />
+          <NavLogo onClick={closeMenu} />
 
           <div className="hidden gap-5 items-center mx-4 md:flex">
             <NavMenuLinks />
@@ -39,10 +39,11 @@ export default function NavBar() {
                 userInfo={userInfo}
                 handleLogout={handleLogout}
                 showDetails={true}
+                onClick={closeMenu}
               />
             </>
           ) : (
-            <AuthButtons />
+            <AuthButtons onClick={closeMenu} />
           )}
         </div>
 
@@ -57,13 +58,14 @@ export default function NavBar() {
             </div>
 
             {!token ? (
-              <AuthButtons isMobile={true} />
+              <AuthButtons isMobile={true} onClick={closeMenu} />
             ) : (
               <div className="flex justify-end">
                 <UserDropdown
                   userInfo={userInfo}
                   handleLogout={handleLogout}
                   showDetails={false}
+                  onClick={closeMenu}
                 />
               </div>
             )}

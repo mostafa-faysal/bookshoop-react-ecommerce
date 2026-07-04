@@ -5,9 +5,14 @@ export default function Register() {
   return (
     <>
       <HeroSection heightClass="h-[25vh]" />
-      <h2 className="justify-center items-center mt-4 text-[25px] lg:text-[30px] font-bold text-center">
+      <h2
+        className="flex justify-center items-center py-4 text-[25px] lg:text-[30px] tex font-SemiBold
+
+ text-[#D9176C] text-center"
+      >
         Create an Account
       </h2>
+
       <Inputs />
     </>
   );

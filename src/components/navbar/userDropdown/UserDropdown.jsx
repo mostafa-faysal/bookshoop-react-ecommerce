@@ -4,10 +4,15 @@ export default function UserDropdown({
   userInfo,
   handleLogout,
   showDetails = false,
+  onClick,
 }) {
   return (
     <div className="dropdown dropdown-end">
-      <div tabIndex={0} role="button" className="px-1 cursor-pointer hover:bg-transparent focus:bg-transparent">
+      <div
+        tabIndex={0}
+        role="button"
+        className="px-1 cursor-pointer hover:bg-transparent focus:bg-transparent"
+      >
         <div className="flex gap-1 items-center">
           <div className="avatar indicator">
             <div className="w-10 rounded-full bg-[#D9176C] flex justify-center items-center">
@@ -48,7 +53,10 @@ export default function UserDropdown({
         className="z-50 p-2 mt-3 w-52 shadow menu menu-sm dropdown-content rounded-box bg-base-100"
       >
         <li>
-          <Link to="/" onClick={handleLogout}>
+          <Link to="/login" onClick={() => {
+            handleLogout();
+            if (onClick) onClick();
+          }}>
             Logout
           </Link>
         </li>

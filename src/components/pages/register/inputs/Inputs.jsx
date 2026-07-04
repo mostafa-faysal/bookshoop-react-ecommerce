@@ -3,7 +3,7 @@ import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { useRef, useState } from "react";
 import { useRegister } from "../../../../hooks/useRegister";
 import toast from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Inputs() {
   const [showPassword, setShowPassword] = useState(false);
@@ -23,7 +23,7 @@ export default function Inputs() {
     const password_confirmation = confirmPasswordRef.current?.value;
 
     if (password !== password_confirmation) {
-      toast.error("كلمة المرور غير متطابقة");
+      toast.error("Passwords do not match");
       return;
     }
 
@@ -31,7 +31,8 @@ export default function Inputs() {
       { name, email, password, password_confirmation },
       {
         onSuccess: (data) => {
-          const successMessage = data?.message || "تم إنشاء الحساب بنجاح";
+          const successMessage =
+            data?.message || "Account created successfully";
           toast.success(successMessage);
 
           navigate("/");
@@ -40,7 +41,7 @@ export default function Inputs() {
           const errorMessage =
             err?.response?.data?.message ||
             err?.message ||
-            "حدث خطأ أثناء إنشاء الحساب";
+            "An error occurred while creating the account";
           toast.error(errorMessage);
         },
       },
@@ -50,7 +51,7 @@ export default function Inputs() {
   return (
     <div className="w-full min-h-[70vh] flex items-center justify-center my-8">
       <form
-        className="fieldset rounded-box w-[90%] md:w-[40%] p-4 bg-white shadow-sm"
+        className="fieldset rounded-box md:w-[40%] w-full p-4"
         onSubmit={onSubmit}
       >
         <fieldset className="fieldset">
@@ -125,6 +126,14 @@ export default function Inputs() {
         <button className="mt-1 btn btn-ghost" type="reset">
           Reset
         </button>
+        <p className="flex justify-center items-center mt-4 text-[13px] gap-1 mt-[-5px]">
+          Already have an account?
+          <Link to="/login">
+            <span className="font-bold text-[#D9176C] cursor-pointer">
+              Login
+            </span>
+          </Link>
+        </p>
       </form>
     </div>
   );
