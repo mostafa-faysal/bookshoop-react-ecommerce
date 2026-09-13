@@ -1,5 +1,6 @@
-"use client";
-import ShopingCart from "../../components/shopingCart/ShopingCart";
+import dynamic from 'next/dynamic';
+
+const ShopingCart = dynamic(() => import('../../components/shopingCart/ShopingCart'), { ssr: false });
 
 export default function Page() {
   return <ShopingCart />;

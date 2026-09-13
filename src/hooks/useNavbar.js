@@ -6,6 +6,7 @@ export const useNavbar = () => {
   const token = useAuthStore((state) => state.token);
   const logout = useAuthStore((state) => state.logout);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
   const handleLogout = () => {
     logout();
@@ -16,6 +17,7 @@ export const useNavbar = () => {
   const closeMenu = () => setIsMenuOpen(false);
 
   useEffect(() => {
+    setIsMounted(true);
     const handleResize = () => {
       if (window.innerWidth >= 768) setIsMenuOpen(false);
     };
@@ -28,7 +30,7 @@ export const useNavbar = () => {
   const { data: userInfo, error } = useUser(token);
 
   return {
-    token,
+    token: isMounted ? token : null,
     isMenuOpen,
     userInfo,
     error,
