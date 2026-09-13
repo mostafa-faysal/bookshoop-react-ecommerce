@@ -11,7 +11,7 @@ export default function BookListItem({ book }) {
         className="w-[70%] md:w-48 mx-auto h-[250px] md:h-full shrink-0 cursor-pointer hover:opacity-90 transition-opacity"
         onClick={() => HandleProductClick(book)}
       >
-        <ProductImage image={book.image} title={book.title} id={book.id} />
+        <ProductImage image={book.image} title={book.title} id={book.id} imgClassName="!object-contain" />
       </div>
 
       <div className="flex flex-col flex-1 justify-between p-5 w-full md:p-6">
