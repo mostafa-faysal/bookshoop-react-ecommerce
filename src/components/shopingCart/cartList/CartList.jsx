@@ -14,8 +14,8 @@ export default function CartList() {
 
   const mergedCart =
     cartData?.map((cartItem) => {
-      const bookDetail = booksData?.find(
-        (b) => Number(b.id) === Number(cartItem.bookId),
+      const bookDetail = cartItem.book || booksData?.find(
+        (b) => String(b.id) === String(cartItem.bookId),
       );
       return {
         ...cartItem,
