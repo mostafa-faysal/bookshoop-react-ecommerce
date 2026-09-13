@@ -15,8 +15,13 @@ export async function GET(request, { params }) {
       return NextResponse.json({ error: error.message }, { status: 404 });
     }
 
+    const mappedData = {
+      ...data,
+      category: data.categories?.name
+    };
+
     // Wrap in { data: ... } to match old API
-    return NextResponse.json({ data: data });
+    return NextResponse.json({ data: mappedData });
   } catch (err) {
     return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
   }

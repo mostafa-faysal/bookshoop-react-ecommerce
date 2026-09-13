@@ -49,9 +49,9 @@ export default function SingleProduct() {
                 <h2 className="text-xl card-title lg:text-2xl">
                   {bookTitle.title}
                 </h2>
-                {bookTitle.categories && (
+                {bookTitle.category && (
                   <span className="badge badge-primary badge-outline my-1 font-semibold tracking-wide uppercase text-xs">
-                    {bookTitle.categories.name}
+                    {bookTitle.category}
                   </span>
                 )}
                 <p className="text-base text-gray-600">
