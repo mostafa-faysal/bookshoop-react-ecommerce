@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+"use client";
+import Link from "next/link";
 import NavMenuLinks from "../navbar/navMenuLinks/NavMenuLinks";
 
 export default function Footer() {
@@ -11,7 +12,7 @@ export default function Footer() {
       <aside>
         <div className="flex justify-center items-center">
           <img src="/navbar/book.png" alt="logo" className="w-5 h-5" />
-          <Link className="p-3 text-base font-semibold text-white">
+          <Link href="/" className="p-3 text-base font-semibold text-white">
             Bookshop
           </Link>
         </div>

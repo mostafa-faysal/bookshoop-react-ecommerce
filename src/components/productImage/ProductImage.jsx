@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
-export default function ProductImage({ image, title, id, imgClassName = "" }) {
+export default function ProductImage({ image, title, id, imgClassName = "object-cover" }) {
   return (
     <Link
-      to={`/post/${id}`}
+      href={`/post/${id}`}
       className="flex justify-center w-full h-full rounded-2xl"
     >
       <img

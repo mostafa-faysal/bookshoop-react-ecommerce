@@ -8,7 +8,7 @@ export const useAddWishlist = () => {
   return useMutation({
     mutationFn: async (id) => {
       try {
-        const response = await api.post(`/wishlist/add`, { bookId: id });
+        const response = await api.post(`/wishlist`, { bookId: id });
         return response.data;
       } catch (error) {
         const errorData = error.response?.data;

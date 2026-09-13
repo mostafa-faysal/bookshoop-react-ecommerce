@@ -1,3 +1,4 @@
+"use client";
 import NavLogo from "./navLogo/NavLogo";
 import NavMenuLinks from "./navMenuLinks/NavMenuLinks";
 import NavIcons from "./navIcons/NavIcons";

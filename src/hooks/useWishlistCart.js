@@ -5,7 +5,7 @@ export function useWishlistCart() {
   const { data, isLoading, error } = useQuery({
     queryKey: ["wishlistCart"],
     queryFn: async () => {
-      const res = await api.get("wishlist/get");
+      const res = await api.get("/wishlist");
       return res.data?.data;
     },
   });

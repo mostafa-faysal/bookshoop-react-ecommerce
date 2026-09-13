@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useRouter as useNavigate } from "next/navigation";
 
 export const useHandleProductClick = () => {
   const navigate = useNavigate();
@@ -15,7 +15,7 @@ export const useHandleProductClick = () => {
     };
     localStorage.setItem(`${book.id}`, JSON.stringify(bookData));
     const savedData = localStorage.getItem(`${book.id}`);
-    savedData && navigate(`/books/${book.id}`);
+    savedData && navigate.push(`/books/${book.id}`);
   };
 
   return handleProductClick;

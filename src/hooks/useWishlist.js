@@ -5,7 +5,7 @@ export const useWishlist = () => {
   return useQuery({
     queryKey: ["wishlist"],
     queryFn: async () => {
-      const response = await api.get(`/wishlist/get`);
+      const response = await api.get(`/wishlist`);
       return response.data.data;
     }
   });

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 export default function UserDropdown({
   userInfo,
@@ -53,7 +53,7 @@ export default function UserDropdown({
         className="z-50 p-2 mt-3 w-52 shadow menu menu-sm dropdown-content rounded-box bg-base-100"
       >
         <li>
-          <Link to="/login" onClick={() => {
+          <Link href="/login" onClick={() => {
             handleLogout();
             if (onClick) onClick();
           }}>

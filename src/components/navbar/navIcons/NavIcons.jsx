@@ -1,7 +1,7 @@
 import { useWishesLength } from "../../../hooks/useWishesLength";
 import { useGetAllItem } from "../../../hooks/useGetAllItem";
 
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 export default function NavIcons() {
   const { data: WishesCount } = useWishesLength();
@@ -9,7 +9,7 @@ export default function NavIcons() {
   const cartCountLength = cartItems?.length || 0;
   return (
     <>
-      <Link to="/wishlist" className="m-0 indicator btn btn-circle btn-ghost">
+      <Link href="/wishlist" className="m-0 indicator btn btn-circle btn-ghost">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -29,7 +29,7 @@ export default function NavIcons() {
         </span>
       </Link>
 
-      <Link to="/cart" className="m-0 indicator btn btn-circle btn-ghost">
+      <Link href="/cart" className="m-0 indicator btn btn-circle btn-ghost">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="size-[1.7em] text-white"

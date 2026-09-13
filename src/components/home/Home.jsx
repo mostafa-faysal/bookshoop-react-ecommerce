@@ -1,0 +1,52 @@
+import HeroSection from "../heroSection/HeroSection";
+import { useState, useEffect } from "react";
+import { useRouter as useNavigate } from "next/navigation";
+import BestSeller from "./bestSeller/BestSeller";
+import FlashSale from "./flashSale/FlashSale";
+import Recomended from "./recomended/Recomended";
+import AlertToLogin from "../ui/alertToLogin/AlertToLogin";
+import useAuthStore from "../../store/useAuthStore";
+import Features from "../features/Features";
+
+export default function Home() {
+  const [isAlertOpen, setIsAlertOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const token = useAuthStore((state) => state.token);
+  const navigate = useNavigate();
+
+  const handleSearchSubmit = (query) => {
+    if (query.trim()) {
+      navigate.push(`/books?search=${encodeURIComponent(query)}`);
+    } else {
+      navigate.push(`/books`);
+    }
+  };
+
+  useEffect(() => {
+    if (!token) {
+      setIsAlertOpen(true);
+    } else {
+      setIsAlertOpen(false);
+    }
+  }, [token]);
+
+  return (
+    <>
+      {isAlertOpen && <AlertToLogin onClose={() => setIsAlertOpen(false)} />}
+      <div className="overflow-x-hidden">
+        <HeroSection
+          heightClass="h-[60vh]"
+          showSearch={true}
+          showDescription={false}
+          searchQuery={searchQuery}
+          setSearchQuery={setSearchQuery}
+          onSearchSubmit={handleSearchSubmit}
+        />
+        <Features />
+        <BestSeller />
+        <Recomended />
+        <FlashSale />
+      </div>
+    </>
+  );
+}

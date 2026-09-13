@@ -1,4 +1,5 @@
-import { NavLink } from "react-router-dom";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export const navLinks = [
   { to: "/", label: "Home" },
@@ -6,19 +7,25 @@ export const navLinks = [
   { to: "/about", label: "About us" },
 ];
 
-export const navLinkClass = ({ isActive }) =>
+export const navLinkClass = (isActive) =>
   isActive
     ? "text-lg font-semibold text-[#EAA451]"
     : "text-lg font-semibold text-white";
 
 export default function NavMenuLinks({ onClick }) {
+  const pathname = usePathname();
+  
   return (
     <>
-      {navLinks.map(({ to, label }) => (
-        <NavLink key={to} to={to} className={navLinkClass} onClick={onClick}>
-          {label}
-        </NavLink>
-      ))}
+      {navLinks.map(({ to, label }) => {
+        // Simple active check. Handle root path exact match, and other paths prefix match.
+        const isActive = to === "/" ? pathname === "/" : pathname?.startsWith(to);
+        return (
+          <Link key={to} href={to} className={navLinkClass(isActive)} onClick={onClick}>
+            {label}
+          </Link>
+        );
+      })}
     </>
   );
 }
