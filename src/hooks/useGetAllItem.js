@@ -8,9 +8,6 @@ export function useGetAllItem() {
   return useQuery({
     queryKey: ["cart"],
     queryFn: async () => {
-      if (localStorage.getItem("forceEmptyCart") === "true") {
-        return [];
-      }
       const response = await api.get("/cart");
       return response.data.data;
     },

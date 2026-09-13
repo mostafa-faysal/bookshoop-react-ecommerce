@@ -29,7 +29,6 @@ export default function FormCheckOut() {
 
           checkoutMutation.mutate(data, {
             onSuccess: () => {
-              localStorage.setItem("forceEmptyCart", "true");
               navigate.push("/");
             },
           });
