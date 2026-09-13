@@ -7,7 +7,7 @@ export default function BookListItem({ book }) {
   return (
     <div className="flex flex-col md:flex-row overflow-hidden border shadow-sm rounded-2xl bg-base-100 border-base-200 w-full md:h-[40vh]">
       <div
-        className="w-full md:w-48 h-[250px] md:h-full shrink-0 p-4 bg-white flex items-center justify-center cursor-pointer hover:opacity-90 transition-opacity"
+        className="w-[70%] md:w-48 mx-auto h-[250px] md:h-full shrink-0 p-4 bg-white flex items-center justify-center cursor-pointer hover:opacity-90 transition-opacity"
         onClick={() => HandleProductClick(book)}
       >
         <img
